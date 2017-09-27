@@ -15,5 +15,11 @@ public class MainController {
 		return "main";
 	}
 	
+	@RequestMapping("/secure")
+	public String secure() {
+		
+		return "secure";
+	}
+	
 	
 }
