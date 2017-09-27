@@ -11,6 +11,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring-version>4.3.7.RELEASE</spring-version>
+		<spring-secu-ver>4.2.0.RELEASE</spring-secu-ver>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
   <dependencies>
@@ -36,8 +37,18 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-    
-  </dependencies>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${spring-secu-ver}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${spring-secu-ver}</version>
+        <scope>runtime</scope>
+    </dependency>
+</dependencies>
   <build>
     <finalName>SpringSecu</finalName>
   </build>
