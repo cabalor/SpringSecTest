@@ -12,15 +12,23 @@ public class SecuCfg extends WebSecurityConfigurerAdapter{
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-        	http
-        		.authorizeRequests().antMatchers("/")
+        	http.csrf().disable();
+        		http.authorizeRequests().antMatchers("/")
         		.permitAll().anyRequest().authenticated()
-        		.and().formLogin();
+        		.and()
+        		.formLogin().loginPage("/form").permitAll()
+        		.loginProcessingUrl("/loginProc").permitAll()
+        		.usernameParameter("username")
+        		.passwordParameter("password")
+        		.and()
+        		.logout()
+        		.logoutUrl("/logout")
+        		.logoutSuccessUrl("/").permitAll();
     }
 	@Override
 	protected void configure(AuthenticationManagerBuilder authoryzation) throws Exception {
 		
-		
+	
 		
 		authoryzation.inMemoryAuthentication().withUser("cbl").password("password").roles("USER"); // with this method we can create an user and set a login and password for him
     }

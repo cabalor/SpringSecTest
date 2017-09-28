@@ -9,5 +9,8 @@
 <body>
 <p><%=request.getAttribute("msg") %></p>
 <a href="secure">przejdz do drugiej strony</a>
+<form action="logout" method="post">
+<input type="submit" value="logout"/>
+</form>
 </body>
 </html>

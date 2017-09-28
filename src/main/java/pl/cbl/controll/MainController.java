@@ -21,5 +21,12 @@ public class MainController {
 		return "secure";
 	}
 	
+	@RequestMapping("/form")
+	public String form() {
+		
+		return "loginForm";
+	}
 	
+	
+
 }
