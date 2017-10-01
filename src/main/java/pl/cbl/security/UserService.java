@@ -8,19 +8,22 @@ import pl.cbl.data.UserRoles;
 import pl.cbl.repo.UserRepo;
 import pl.cbl.repo.UserRolesRepo;
 
-@Service
+@Service // you can use @component here but service is more proper in place where you have a service like here.
 public class UserService {
 
-	private static final String Role = "Role_User";
-	private UserRepo userRepo;
-	private UserRolesRepo userRoleRepo;
+	private static final String Role = "Role User";
 	
 	@Autowired
+	private UserRepo userRepo;
+	@Autowired
+	private UserRolesRepo userRoleRepo;
+	
+	
     public void setUserRepository(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
      
-    @Autowired
+
     public void setRoleRepository(UserRolesRepo userRoleRepo) {
         this.userRoleRepo = userRoleRepo;
     }

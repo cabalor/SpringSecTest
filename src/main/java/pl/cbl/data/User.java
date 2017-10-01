@@ -26,7 +26,7 @@ public class User {
 	private String name;
 	private String lastName;
 	@NotBlank
-	private String Email;
+	private String email;
 	@NotBlank
 	private String password;
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -65,11 +65,11 @@ public class User {
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -90,7 +90,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", login=" + login + ", name=" + name + ", lastName=" + lastName + ", Email=" + Email
+		return "User [id=" + id + ", login=" + login + ", name=" + name + ", lastName=" + lastName + ", Email=" + email
 				+ ", password=" + password + ", roles=" + roles + "]";
 	}
 
