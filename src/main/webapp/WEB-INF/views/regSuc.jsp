@@ -9,6 +9,6 @@
 <body>
 
 <h1>registration sucesfuly completed</h1>
-<a href="/main">wroc do strony startowej</a>
+<a href="main">wroc do strony startowej</a>
 </body>
 </html>

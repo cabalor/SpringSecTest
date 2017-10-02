@@ -14,8 +14,12 @@ import pl.cbl.security.UserService;
 
 @Controller
 public class UserController {
-	@Autowired
+	
 	private UserService userSer;
+	@Autowired
+	public void setUserSErv(UserService US) {
+		this.userSer = US;
+	}
 	
 	
 	@GetMapping("/register")

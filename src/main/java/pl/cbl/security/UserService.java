@@ -1,5 +1,7 @@
 package pl.cbl.security;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,21 +11,22 @@ import pl.cbl.repo.UserRepo;
 import pl.cbl.repo.UserRolesRepo;
 
 @Service // you can use @component here but service is more proper in place where you have a service like here.
+@Transactional
 public class UserService {
 
-	private static final String Role = "Role User";
+	private static final String Role = "ROLE_USER";
 	
-	@Autowired
+	
 	private UserRepo userRepo;
-	@Autowired
+	
 	private UserRolesRepo userRoleRepo;
 	
-	
+	@Autowired
     public void setUserRepository(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
      
-
+    @Autowired
     public void setRoleRepository(UserRolesRepo userRoleRepo) {
         this.userRoleRepo = userRoleRepo;
     }
