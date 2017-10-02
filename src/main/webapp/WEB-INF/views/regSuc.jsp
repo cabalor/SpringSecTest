@@ -4,14 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>site about security</title>
+<title>Insert title here</title>
 </head>
 <body>
-<p><%=request.getAttribute("msg") %></p>
-<a href="secure">przejdz do drugiej strony</a>
-<a href="register">przejdz do rejestracji</a>
-<form action="logout" method="post">
-<input type="submit" value="logout"/>
-</form>
+
+<h1>registration sucesfuly completed</h1>
+<a href="/main">wroc do strony startowej</a>
 </body>
 </html>
