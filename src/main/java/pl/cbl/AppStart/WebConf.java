@@ -20,7 +20,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.cbl.*")
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "pl.cbl.repo")
+@EnableJpaRepositories(basePackages = "pl.cbl.*")
 public class WebConf extends WebMvcConfigurerAdapter {
 
 	@Bean

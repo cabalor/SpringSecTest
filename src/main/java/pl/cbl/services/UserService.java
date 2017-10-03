@@ -1,4 +1,4 @@
-package pl.cbl.security;
+package pl.cbl.services;
 
 import javax.transaction.Transactional;
 

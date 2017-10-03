@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import pl.cbl.data.User;
-import pl.cbl.security.UserService;
+import pl.cbl.services.UserService;
 
 @Controller
 public class UserController {
 	
 	private UserService userSer;
+	
 	@Autowired
 	public void setUserSErv(UserService US) {
 		this.userSer = US;
